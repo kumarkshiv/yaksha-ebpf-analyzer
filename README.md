@@ -1,4 +1,4 @@
-# Yaksha-Prashna — eBPF Bytecode Network Function Analyzer
+# Yaksha-Prashna: Understanding eBPF Bytecode NF Behavior
 > Published on Arxiv 2026
 
 ## The Problem
