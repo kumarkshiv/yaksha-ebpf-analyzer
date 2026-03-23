@@ -1,5 +1,5 @@
 # Yaksha-Prashna — eBPF Bytecode Network Function Analyzer
-> Published on Arxiv 2025
+> Published on Arxiv 2026
 
 ## The Problem
 Cloud operators increasingly deploy third-party eBPF-based 
