@@ -1,0 +1,513 @@
+{
+    "protocols": {
+        "-1": {
+            "protocol_name": "Ethernet",
+            "header_size_bytes": 14,
+            "tail_offset": 12,
+            "next_protocols": [8, 2048, 56710, 34525, 1544, 2054, 129, 34984, 33024, 43144, 47],
+            "field_offsets": {
+                "0": "h_dest",
+                "6": "h_source",
+                "12": "h_proto"
+            }
+        },
+        "2048": {
+            "protocol_name": "IPv4",
+            "header_size_bytes": 20,
+            "tail_offset": 9,
+            "next_protocols": [6, 17, 47],
+            "field_offsets": {
+                "0": "ihl",
+                "1": "tos",
+                "2": "tot_len",
+                "4": "id",
+                "6": "frag_off",
+                "8": "ttl",
+                "9": "protocol",
+                "10": "check",
+                "12": "saddr",
+                "16": "daddr"
+            }
+        },
+        "8": {
+            "protocol_name": "IPv4",
+            "header_size_bytes": 20,
+            "tail_offset": 9,
+            "next_protocols": [6, 17, 47],
+            "field_offsets": {
+                "0": "ihl",
+                "1": "tos",
+                "2": "tot_len",
+                "4": "id",
+                "6": "frag_off",
+                "8": "ttl",
+                "9": "protocol",
+                "10": "check",
+                "12": "saddr",
+                "16": "daddr"
+            }
+        },
+        "6": {
+            "protocol_name": "TCP",
+            "header_size_bytes": 20,
+            "tail_offset": -1,
+            "next_protocols": [],
+            "field_offsets": {
+                "0": "source",
+                "2": "dest",
+                "4": "seq",
+                "8": "ack_seq",
+                "12": "flags",
+                "14": "window",
+                "16": "check",
+                "18": "urg_ptr"
+            }
+        },
+        "17": {
+            "protocol_name": "UDP",
+            "header_size_bytes": 8,
+            "tail_offset": -1,
+            "next_protocols": [47],
+            "field_offsets": {
+                "0": "source",
+                "2": "dest",
+                "4": "len",
+                "6": "check"
+            }
+        },
+        "56710": {
+            "protocol_name": "IPv6",
+            "header_size_bytes": 40,
+            "tail_offset": 6,
+            "next_protocols": [6, 17, 47],
+            "field_offsets": {
+                "0": "priority",
+                "1": "flow_lbl",
+                "4": "payload_len",
+                "6": "nexthdr",
+                "7": "hop_limit",
+                "8": "saddr",
+                "24": "daddr"
+            }
+        },
+        "34525": {
+            "protocol_name": "IPv6",
+            "header_size_bytes": 40,
+            "tail_offset": 6,
+            "next_protocols": [6, 17, 47],
+            "field_offsets": {
+                "0": "priority",
+                "1": "flow_lbl",
+                "4": "payload_len",
+                "6": "nexthdr",
+                "7": "hop_limit",
+                "8": "saddr",
+                "24": "daddr"
+            }
+        },
+        "1544": {
+            "protocol_name": "ARP",
+            "header_size_bytes": 8,
+            "tail_offset": -1,
+            "next_protocols": [],
+            "field_offsets": {
+                "0": "ar_hrd",
+                "2": "ar_pro",
+                "4": "ar_hln",
+                "5": "ar_pln",
+                "6": "ar_op"
+            }
+        },
+        "2054": {
+            "protocol_name": "ARP",
+            "header_size_bytes": 8,
+            "tail_offset": -1,
+            "next_protocols": [],
+            "field_offsets": {
+                "0": "ar_hrd",
+                "2": "ar_pro",
+                "4": "ar_hln",
+                "5": "ar_pln",
+                "6": "ar_op"
+            }
+        },
+        "129": {
+            "protocol_name": "VLAN",
+            "header_size_bytes": 4,
+            "tail_offset": 2,
+            "next_protocols": [-1],
+            "field_offsets": {
+                "0": "h_vlan_TCI",
+                "2": "h_vlan_encapsulated_proto"
+            }
+        },
+        "34984": {
+            "protocol_name": "VLAN",
+            "header_size_bytes": 4,
+            "tail_offset": 2,
+            "next_protocols": [-1],
+            "field_offsets": {
+                "0": "h_vlan_TCI",
+                "2": "h_vlan_encapsulated_proto"
+            }
+        },
+        "33024": {
+            "protocol_name": "VLAN",
+            "header_size_bytes": 4,
+            "tail_offset": 2,
+            "next_protocols": [-1],
+            "field_offsets": {
+                "0": "h_vlan_TCI",
+                "2": "h_vlan_encapsulated_proto"
+            }
+        },
+        "43144": {
+            "protocol_name": "VLAN",
+            "header_size_bytes": 4,
+            "tail_offset": 2,
+            "next_protocols": [-1],
+            "field_offsets": {
+                "0": "h_vlan_TCI",
+                "2": "h_vlan_encapsulated_proto"
+            }
+        },
+        "47": {
+            "protocol_name": "GRE",
+            "header_size_bytes": 4,
+            "tail_offset": 2,
+            "next_protocols": [-1],
+            "field_offsets": {
+                "0": "flags",
+                "2": "protocol"
+            }
+        },
+        "4": {
+            "protocol_name": "IPPROTO_IPIP",
+            "header_size_bytes": 20,
+            "tail_offset": 9,
+            "next_protocols": [8, 2048],
+            "field_offsets": {
+                "0": "ihl",
+                "1": "tos",
+                "2": "tot_len",
+                "4": "id",
+                "6": "flags",
+                "8": "ttl",
+                "9": "protocol",
+                "10": "check",
+                "12": "saddr",
+                "16": "daddr"
+            }
+        },
+        "41": {
+            "protocol_name": "IPPROTO_IPV6",
+            "header_size_bytes": 40,
+            "tail_offset": 6,
+            "next_protocols": [8, 2048, 34525, 56710],
+            "field_offsets": {
+                "0": "priority",
+                "1": "flow_lbl",
+                "4": "payload_len",
+                "6": "nexthdr",
+                "7": "hop_limit",
+                "8": "saddr",
+                "24": "daddr"
+            }
+        },
+        "44": {
+            "protocol_name": "IPPROTO_FRAGMENT",
+            "header_size_bytes": 8,
+            "tail_offset": 0,
+            "next_protocols": [],
+            "field_offsets": {
+                "0": "nexthdr",
+                "1": "reserved",
+                "2": "frag_off",
+                "4": "id"
+            }
+        },
+        "35006": {
+            "protocol_name": "ETH_P_ERSPAN",
+            "header_size_bytes": 4,
+            "tail_offset": -1,
+            "next_protocols": [],
+            "field_offsets": {
+                "0": "vlan_upper",
+                "1": "vlan",
+                "2": "session_id_upper",
+                "3": "session_id"
+            }
+        },
+        "48776": {
+            "protocol_name": "ETH_P_ERSPAN",
+            "header_size_bytes": 4,
+            "tail_offset": -1,
+            "next_protocols": [],
+            "field_offsets": {
+                "0": "vlan_upper",
+                "1": "vlan",
+                "2": "session_id_upper",
+                "3": "session_id"
+            }
+        },
+        "6081": {
+            "protocol_name": "GENEVE",
+            "header_size_bytes": 11,
+            "tail_offset": 5,
+            "next_protocols": [-1],
+            "field_offsets": {
+                "0": "opt_len",
+                "1": "ver",
+                "2": "rsvd1",
+                "3": "critical",
+                "4": "oam",
+                "5": "proto_type",
+                "7": "vni",
+                "10": "rsvd2"
+            }
+        },
+        "49431": {
+            "protocol_name": "GENEVE",
+            "header_size_bytes": 11,
+            "tail_offset": 5,
+            "next_protocols": [-1],
+            "field_offsets": {
+                "0": "opt_len",
+                "1": "ver",
+                "2": "rsvd1",
+                "3": "critical",
+                "4": "oam",
+                "5": "proto_type",
+                "7": "vni",
+                "10": "rsvd2"
+            }
+        }
+    },
+    "helper_functions": {
+        "1": {
+            "helper_function_name": "bpf_map_lookup_elem",
+            "does_packet_manipulation": false,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct bpf_map *map",
+                "const void *key"
+            ]
+        },
+        "2": {
+            "helper_function_name": "bpf_map_update_elem",
+            "does_packet_manipulation": false,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct bpf_map *map",
+                "const void *key",
+                "const void *value",
+                "uint64_t flags"
+            ]
+        },
+        "9": {
+            "helper_function_name": "bpf_skb_store_bytes",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "u32 offset",
+                "const void *from",
+                "u32 len",
+                "u64 flags"
+            ]
+        },
+        "10": {
+            "helper_function_name": "bpf_l3_csum_replace",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "u32 offset",
+                "u64 from",
+                "u64 to",
+                "u64 size"
+            ]
+        },
+        "11": {
+            "helper_function_name": "bpf_l4_csum_replace",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "u32 offset",
+                "u64 from",
+                "u64 to",
+                "u64 flags"
+            ]
+        },
+        "12": {
+            "helper_function_name": "bpf_tail_call",
+            "does_packet_manipulation": false,
+            "compatible_hookpoints": [
+              "sk_lookup",
+              "syscall",
+              "sk_reuseport",
+              "flow_dissector",
+              "cgroup_sysctl",
+              "raw_tracepoint_writable",
+              "cgroup_sockopt",
+              "socket_filter",
+              "kprobe",
+              "sched_cls",
+              "sched_act",
+              "tracepoint",
+              "xdp",
+              "perf_event",
+              "cgroup_skb",
+              "cgroup_sock",
+              "lwt_in",
+              "lwt_out",
+              "lwt_xmit",
+              "sock_ops",
+              "sk_skb",
+              "cgroup_device",
+              "sk_msg",
+              "raw_tracepoint",
+              "cgroup_sock_addr",
+              "lwt_seg6local"
+            ],
+            "arguments": ["void *ctx", "struct bpf_map *prog_array_map", "u32 index"]
+          },
+        "13": {
+            "helper_function_name": "bpf_clone_redirect",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "u32 ifindex",
+                "u64 flags"
+            ]
+        },
+        "18": {
+            "helper_function_name": "bpf_skb_vlan_push",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "__be16 vlan_proto",
+                "u16 vlan_tci"
+            ]
+        },
+        "19": {
+            "helper_function_name": "bpf_skb_vlan_pop",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb"
+            ]
+        },
+        "31": {
+            "helper_function_name": "bpf_skb_change_proto",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "__be proto",
+                "u64 flags"
+            ]
+        },
+        "38": {
+            "helper_function_name": "bpf_skb_change_tail",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "u32 len",
+                "u64 flags"
+            ]
+        },
+        "39": {
+            "helper_function_name": "bpf_skb_pull_data",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "u32 len"
+            ]
+        },
+        "43": {
+            "helper_function_name": "bpf_skb_change_head",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "u32 len",
+                "u64 flags"
+            ]
+        },
+        "44": {
+            "helper_function_name": "bpf_xdp_adjust_head",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp"],
+            "arguments": [
+                "struct xdp_buff *xdp_md", 
+                "int delta"
+            ]
+        },
+        "50": {
+            "helper_function_name": "bpf_skb_adjust_room",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_buff *skb",
+                "s32 len_diff",
+                "u32 mode",
+                "u64 flags"
+            ]
+        },
+	    "51": {
+		  "helper_function_name": "bpf_redirect_map",
+		  "does_packet_manipulation": false,
+		  "compatible_hookpoints": ["xdp"],
+		  "arguments": ["struct bpf_map *map", "u32 key", "u64 flags"]
+		},
+        "54": {
+            "helper_function_name": "bpf_xdp_adjust_meta",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp"],
+            "arguments": [
+                "struct xdp_md *xdp_md", 
+                "int delta"
+            ]
+        },
+        "63": {
+            "helper_function_name": "bpf_msg_pull_data",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp", "tc"],
+            "arguments": [
+                "struct sk_msg_buff *msg",
+                "u32 start",
+                "u32 end",
+                "u64 flags"
+            ]
+        },
+        "65": {
+            "helper_function_name": "bpf_xdp_adjust_tail",
+            "does_packet_manipulation": true,
+            "compatible_hookpoints": ["xdp"],
+            "arguments": [
+                "struct xdp_buff *xdp_md", 
+                "int delta"
+            ]
+        }
+    },
+    "map_info": {
+        "map1": {
+            "rules": {
+                "key1": "value1",
+                "key2": "value2"
+            }
+        },
+        "map2": {
+            "rules": {
+                "key3": "value3",
+                "key4": "value4"
+            }
+        }
+    }
+}
